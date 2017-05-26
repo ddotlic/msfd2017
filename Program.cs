@@ -16,6 +16,9 @@ namespace msfd2017
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+#if !DEBUG
+                .UseUrls("http://127.0.0.1:80/")
+#else
                 .Build();
 
             host.Run();
