@@ -18,7 +18,7 @@ namespace msfd2017
                 .UseStartup<Startup>()
 #if !DEBUG
                 .UseUrls("http://127.0.0.1:80/")
-#else
+#endif
                 .Build();
 
             host.Run();
